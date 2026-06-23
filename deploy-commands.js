@@ -15,8 +15,14 @@ const commands = [
     .setDescription("View current roadmap"),
 
   new SlashCommandBuilder()
-    .setName("idea")
-    .setDescription("Submit an idea"),
+  .setName("idea")
+  .setDescription("Submit an idea")
+  .addStringOption(option =>
+    option
+      .setName("idea")
+      .setDescription("Your idea")
+      .setRequired(true)
+  ),
 new SlashCommandBuilder()
   .setName("help")
   .setDescription("Show SparkAI Bot commands"),
