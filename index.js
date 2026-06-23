@@ -133,7 +133,11 @@ if (!allowedChannels.includes(message.channel.name)) return;
     ch => ch.name === "rejected-ideas"
   );
 
-  if (reaction.emoji.name === "✅" && approvedChannel) {
+  if (
+  message.channel.name === "ideas-submissions" &&
+  reaction.emoji.name === "✅" &&
+  approvedChannel
+) {
 
     await approvedChannel.send(
         `✅ Approved Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
@@ -150,7 +154,11 @@ if (!allowedChannels.includes(message.channel.name)) return;
     }
 }
 
-  if (reaction.emoji.name === "❌" && rejectedChannel) {
+ if (
+  message.channel.name === "ideas-submissions" &&
+  reaction.emoji.name === "❌" &&
+  rejectedChannel
+) {
     await rejectedChannel.send(
       `❌ Rejected Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
     );
