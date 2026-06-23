@@ -172,7 +172,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 
   if (
   ["research-queue", "research-critical", "research-medium", "research-low"].includes(message.channel.name) &&
-  !["🔴", "🟡", "🟢", "✅", "❌"].includes(reaction.emoji.name)
+  reaction.emoji.name === "🔬"
 ) {
     const researchActive = message.guild.channels.cache.find(
       ch => ch.name === "research-active"
