@@ -111,7 +111,32 @@ Rules:
   }
 }
 });
+client.on(Events.MessageReactionAdd, async (reaction, user) => {
+  if (user.bot) return;
 
+  const message = reaction.message;
+  if (message.channel.name !== "ideas-submissions") return;
+
+  const approvedChannel = message.guild.channels.cache.find(
+    ch => ch.name === "approved-ideas"
+  );
+
+  const rejectedChannel = message.guild.channels.cache.find(
+    ch => ch.name === "rejected-ideas"
+  );
+
+  if (reaction.emoji.name === "✅" && approvedChannel) {
+    await approvedChannel.send(
+      `✅ Approved Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
+    );
+  }
+
+  if (reaction.emoji.name === "❌" && rejectedChannel) {
+    await rejectedChannel.send(
+      `❌ Rejected Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
+    );
+  }
+});
 client.login(process.env.DISCORD_BOT_TOKEN);
 
 
