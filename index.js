@@ -15,6 +15,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 const companyInfo = fs.readFileSync("companyInfo.txt", "utf8");
+const smartTakeoffInfo = fs.readFileSync("smarttakeoff.txt", "utf8");
 client.once(Events.ClientReady, () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
@@ -71,7 +72,9 @@ Use the approved company information below when answering questions.
 Approved company information:
 
 ${companyInfo}
+SmartTakeoff information:
 
+${smartTakeoffInfo}
 Rules:
 - Be clear, friendly, and professional.
 - Do not invent facts.
