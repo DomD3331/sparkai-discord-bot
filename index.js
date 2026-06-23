@@ -35,7 +35,11 @@ client.on(Events.InteractionCreate, async interaction => {
       "CEO/Founder: Jameson Davies\nCTO: Dominik Desoto"
     );
   }
-
+if (commandName === "help") {
+  return interaction.reply(
+    "SparkAI Bot Commands:\n\n/about - Learn about SparkAIResearch\n/team - See leadership\n/roadmap - View current focus\n/idea - Share a research idea\n/ask - Ask SparkAI Bot a question\n/help - Show this command list"
+  );
+}
   if (commandName === "roadmap") {
     return interaction.reply(
       "Current Focus:\n• SparkAI Bot\n• Research Infrastructure\n• SmartTakeoff Development\n• Community Growth"
