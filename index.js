@@ -162,8 +162,8 @@ if (!allowedChannels.includes(message.channel.name)) return;
 
   if (researchActive) {
     await researchActive.send(
-      `🔬 Active Research\n\nMoved by: ${user.username}\n\n${message.content}`
-    );
+  `🔬 Active Research\n\nAssigned To: ${user.username}\n\nStarted: ${new Date().toLocaleDateString()}\n\nStatus: In Progress\n\n${message.content}`
+);
   }
 }
 
@@ -174,8 +174,8 @@ if (message.channel.name === "research-active" && reaction.emoji.name === "✅")
 
   if (researchComplete) {
     await researchComplete.send(
-      `✅ Research Complete\n\nCompleted by: ${user.username}\n\n${message.content}`
-    );
+  `✅ Research Complete\n\nCompleted By: ${user.username}\n\nCompleted: ${new Date().toLocaleDateString()}\n\n${message.content}`
+);
   }
 }
 });
