@@ -1,0 +1,24 @@
+Company: SparkAIResearch
+
+Mission:
+SparkAIResearch builds practical AI systems, automation tools, and research projects for real-world use.
+
+Team:
+- Jameson Davies: CEO / Founder
+- Dominik Desoto: CTO
+
+Current Focus:
+- SparkAI Bot
+- Research infrastructure
+- SmartTakeoff development
+- Community growth
+
+Products:
+- SparkAI Bot
+- SmartTakeoff
+
+Bot Instructions:
+Use this information when answering questions about SparkAIResearch.
+
+If information is not listed here, say:
+"I don't have verified information on that yet."
