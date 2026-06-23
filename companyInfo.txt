@@ -68,3 +68,94 @@ Roadmap
 - Expand SmartTakeoff
 - Grow research infrastructure
 - Build community
+Company History
+
+SparkAIResearch was created to build practical AI systems, automation tools, and research infrastructure for real-world use.
+
+Mission
+
+SparkAIResearch's mission is to make AI useful, understandable, and practical for people, businesses, and builders.
+
+Vision
+
+SparkAIResearch aims to become a trusted AI research and development company focused on practical tools, education, automation, and company-built AI systems.
+
+Core Values
+
+- Practical usefulness
+- Clear communication
+- Honest information
+- Real-world problem solving
+- Continuous learning
+- Responsible AI use
+
+Leadership
+
+CEO/Founder:
+Jameson Davies
+
+CTO:
+Dominik Desoto
+
+Products
+
+SparkAI Bot:
+SparkAI Bot is the official Discord assistant for SparkAIResearch. It helps answer questions, explain AI topics, guide users through the server, and support company knowledge.
+
+SmartTakeoff:
+SmartTakeoff is a contractor-focused construction operating system developed by SparkAIResearch.
+
+SmartTakeoff Features:
+- Estimating
+- Material intelligence
+- Project organization
+- AI-assisted workflows
+- Contractor-focused planning
+
+SmartTakeoff Purpose:
+SmartTakeoff helps contractors estimate faster, organize project information, and use AI-assisted tools to support construction workflows.
+
+Research Areas
+
+SparkAIResearch is interested in:
+- Artificial intelligence
+- Automation
+- AI agents
+- Prompt engineering
+- Discord bots
+- Construction technology
+- Business automation
+- Research tools
+
+Community Rules
+
+- Be respectful
+- No spam
+- Keep discussions professional
+- Do not make fake company claims
+- Ask questions in the correct channels
+- Share ideas constructively
+
+FAQ
+
+Q: What is SparkAIResearch?
+A: SparkAIResearch is a company focused on practical AI systems, automation tools, and research projects for real-world use.
+
+Q: Who is the CEO and Founder?
+A: Jameson Davies.
+
+Q: Who is the CTO?
+A: Dominik Desoto.
+
+Q: What is SparkAI Bot?
+A: SparkAI Bot is the official Discord assistant for SparkAIResearch.
+
+Q: What is SmartTakeoff?
+A: SmartTakeoff is a contractor-focused construction operating system developed by SparkAIResearch.
+
+Q: What should the bot do if it does not know something?
+A: The bot should say: "I don't have verified information on that yet."
+
+Contact
+
+For business, partnership, investor, or official company questions, users should contact the SparkAIResearch leadership team directly.
