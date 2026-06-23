@@ -150,6 +150,29 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
       `❌ Rejected Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
     );
   }
+  if (message.channel.name === "research-queue" && reaction.emoji.name === "🔬") {
+  const researchActive = message.guild.channels.cache.find(
+    ch => ch.name === "research-active"
+  );
+
+  if (researchActive) {
+    await researchActive.send(
+      `🔬 Active Research\n\nMoved by: ${user.username}\n\n${message.content}`
+    );
+  }
+}
+
+if (message.channel.name === "research-active" && reaction.emoji.name === "✅") {
+  const researchComplete = message.guild.channels.cache.find(
+    ch => ch.name === "research-complete"
+  );
+
+  if (researchComplete) {
+    await researchComplete.send(
+      `✅ Research Complete\n\nCompleted by: ${user.username}\n\n${message.content}`
+    );
+  }
+}
 });
 client.login(process.env.DISCORD_BOT_TOKEN);
 
