@@ -53,16 +53,17 @@ if (commandName === "help") {
   }
 
   if (commandName === "ask") {
-    await interaction.deferReply();
+  await interaction.deferReply();
 
+  try {
     const prompt = interaction.options.getString("question");
 
     const response = await openai.chat.completions.create({
-  model: "gpt-4o-mini",
-  messages: [
-    {
-      role: "system",
-      content: `
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content: `
 You are SparkAI Bot, the official Discord assistant for SparkAIResearch.
 
 Your job is to help members with:
@@ -75,6 +76,7 @@ Your job is to help members with:
 Approved company information:
 
 ${companyInfo}
+
 Rules:
 - Be clear, friendly, and professional.
 - Do not invent facts.
@@ -82,17 +84,25 @@ Rules:
 - If you do not know something, say: "I don't have verified information on that yet."
 - Keep answers helpful but not too long.
 `
-    },
-    {
-      role: "user",
-      content: prompt
-    }
-  ]
-});
+        },
+        {
+          role: "user",
+          content: prompt
+        }
+      ]
+    });
+
     return interaction.editReply(
       response.choices[0].message.content
     );
+  } catch (error) {
+    console.error(error);
+
+    return interaction.editReply(
+      "Sorry, I had trouble answering that. Please try again in a minute."
+    );
   }
+
 });
 
 client.login(process.env.DISCORD_BOT_TOKEN);
