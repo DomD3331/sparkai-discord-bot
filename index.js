@@ -1,4 +1,5 @@
 import "dotenv/config";
+import fs from "fs";
 import {
   Client,
   GatewayIntentBits,
@@ -13,7 +14,7 @@ const client = new Client({
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
-
+const companyInfo = fs.readFileSync("companyInfo.txt", "utf8");
 client.once(Events.ClientReady, () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
@@ -67,12 +68,9 @@ Your job is to help members with:
 - Discord guidance
 - project help
 
-Company facts:
-- SparkAIResearch focuses on practical AI systems, automation, research, and real-world deployment.
-- CEO/Founder: Jameson Davies
-- CTO: Dominik Desoto
-- Current focus: SparkAI Bot, research infrastructure, SmartTakeoff development, and community growth.
+Approved company information:
 
+${companyInfo}
 Rules:
 - Be clear, friendly, and professional.
 - Do not invent facts.
