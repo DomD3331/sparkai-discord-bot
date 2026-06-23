@@ -129,10 +129,21 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
   );
 
   if (reaction.emoji.name === "✅" && approvedChannel) {
+
     await approvedChannel.send(
-      `✅ Approved Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
+        `✅ Approved Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
     );
-  }
+
+    const researchQueue = message.guild.channels.cache.find(
+        ch => ch.name === "research-queue"
+    );
+
+    if (researchQueue) {
+        await researchQueue.send(
+            `🧠 Research Queue Item\n\nApproved by: ${user.username}\n\n${message.content}`
+        );
+    }
+}
 
   if (reaction.emoji.name === "❌" && rejectedChannel) {
     await rejectedChannel.send(
