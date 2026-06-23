@@ -17,7 +17,9 @@ const commands = [
   new SlashCommandBuilder()
     .setName("idea")
     .setDescription("Submit an idea"),
-
+new SlashCommandBuilder()
+  .setName("help")
+  .setDescription("Show SparkAI Bot commands"),
   new SlashCommandBuilder()
     .setName("ask")
     .setDescription("Ask SparkAI Bot a question")
