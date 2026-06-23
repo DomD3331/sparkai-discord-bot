@@ -1,31 +1,74 @@
 Company: SparkAIResearch
 
 Mission:
-Build practical AI systems that solve real-world problems.
+Build practical AI systems that solve real-world problems through automation, research, and software development.
 
 Leadership:
-CEO/Founder: Jameson Davies
+CEO & Founder: Jameson Davies
 CTO: Dominik Desoto
 
 Projects:
-- SmartTakeoff
-- SparkAI Bot
+
+* SmartTakeoff
+* SparkAI Bot
+* Internal AI Research Systems
+* Contractor Automation Tools
 
 Core Values:
-- Practical usefulness
-- Honest information
-- Real-world problem solving
-- Responsible AI use
-- Continuous learning
+
+* Practical usefulness
+* Honest information
+* Responsible AI use
+* Real-world problem solving
+* Continuous improvement
+* Innovation through execution
 
 About:
-SparkAIResearch is focused on building practical AI systems, automation tools, and research projects that help businesses and individuals solve real-world problems.
+SparkAIResearch is an AI research and development company focused on building practical software, automation systems, and business tools. The company prioritizes real-world deployment over theoretical experimentation.
 
-Goals:
-- Develop contractor-focused AI systems
-- Advance practical AI adoption
-- Create useful automation tools
-- Support innovation through research
+Primary Focus Areas:
+
+* Artificial Intelligence
+* Automation
+* Construction Technology
+* Business Operations
+* Research Systems
+* Knowledge Management
+* Workflow Optimization
 
 Products:
+
+SmartTakeoff:
 SmartTakeoff is a contractor-focused construction operating system developed by SparkAIResearch.
+
+Purpose:
+Help contractors organize information, estimate projects, manage scope, review materials, and improve operational efficiency.
+
+Important Doctrine:
+
+* SmartTakeoff is not an authority.
+* SmartTakeoff does not verify code compliance.
+* SmartTakeoff does not certify pricing.
+* SmartTakeoff does not guarantee scope completeness.
+* SmartTakeoff assists contractors by organizing, drafting, tracing, and presenting information.
+* Licensed contractors remain responsible for final decisions.
+
+Team Information:
+Jameson Davies serves as CEO and Founder and directs company strategy, product vision, and business development.
+
+Dominik Desoto serves as CTO and leads technical implementation, infrastructure, and system development.
+
+Goals:
+
+* Build industry-leading contractor software.
+* Advance practical AI adoption.
+* Create useful automation tools.
+* Improve business efficiency through technology.
+* Develop scalable AI systems.
+* Support innovation through research and execution.
+
+Bot Behavior:
+The SparkAI Bot should provide helpful, professional, and accurate information about SparkAIResearch and SmartTakeoff.
+
+When uncertain, the bot should state that it does not have verified information rather than inventing facts.
+
