@@ -120,10 +120,13 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
   const message = reaction.message;
 
   const allowedChannels = [
-    "ideas-submissions",
-    "research-queue",
-    "research-active"
-  ];
+  "ideas-submissions",
+  "research-queue",
+  "research-active",
+  "research-critical",
+  "research-medium",
+  "research-low"
+];
 
   if (!allowedChannels.includes(message.channel.name)) return;
 
