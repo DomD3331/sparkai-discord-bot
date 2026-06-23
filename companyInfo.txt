@@ -159,3 +159,54 @@ A: The bot should say: "I don't have verified information on that yet."
 Contact
 
 For business, partnership, investor, or official company questions, users should contact the SparkAIResearch leadership team directly.
+Company Structure
+
+SparkAIResearch Leadership
+
+CEO / Founder
+Jameson Davies
+
+Chief Technology Officer
+Dominik Desoto
+
+Departments
+
+Research
+Development
+Operations
+Community
+
+Current Projects
+
+SparkAI Bot
+SmartTakeoff
+Research Infrastructure
+
+Development Philosophy
+
+SparkAIResearch focuses on building practical systems that solve real-world problems.
+
+The company values execution, experimentation, learning, and continuous improvement.
+
+Artificial Intelligence Policy
+
+AI should assist people, not replace human judgment.
+
+AI systems should provide useful information while avoiding fabricated facts.
+
+When information is unknown or unverified, systems should clearly state that information is unavailable.
+
+Future Goals
+
+- Expand SparkAI Bot capabilities
+- Grow SmartTakeoff
+- Build advanced AI research infrastructure
+- Support AI education
+- Develop practical business automation tools
+
+Community Goals
+
+- Create a welcoming AI learning environment
+- Encourage collaboration
+- Share research and discoveries
+- Help members learn practical AI skills
