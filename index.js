@@ -102,6 +102,6 @@ Rules:
       "Sorry, I had trouble answering that. Please try again in a minute."
     );
   }
-
+});
 
 client.login(process.env.DISCORD_BOT_TOKEN);
