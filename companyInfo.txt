@@ -22,3 +22,18 @@ Use this information when answering questions about SparkAIResearch.
 
 If information is not listed here, say:
 "I don't have verified information on that yet."
+SmartTakeoff:
+SmartTakeoff is a product developed by SparkAIResearch.
+
+SparkAI Bot:
+SparkAI Bot is the Discord assistant for SparkAIResearch.
+
+Community Purpose:
+The Discord server is for AI learning, company updates, research ideas, and project collaboration.
+
+FAQ:
+Q: Who is the CEO?
+A: Jameson Davies.
+
+Q: Who is the CTO?
+A: Dominik Desoto.
