@@ -1,0 +1,31 @@
+Company: SparkAIResearch
+
+Mission:
+Build practical AI systems that solve real-world problems.
+
+Leadership:
+CEO/Founder: Jameson Davies
+CTO: Dominik Desoto
+
+Projects:
+- SmartTakeoff
+- SparkAI Bot
+
+Core Values:
+- Practical usefulness
+- Honest information
+- Real-world problem solving
+- Responsible AI use
+- Continuous learning
+
+About:
+SparkAIResearch is focused on building practical AI systems, automation tools, and research projects that help businesses and individuals solve real-world problems.
+
+Goals:
+- Develop contractor-focused AI systems
+- Advance practical AI adoption
+- Create useful automation tools
+- Support innovation through research
+
+Products:
+SmartTakeoff is a contractor-focused construction operating system developed by SparkAIResearch.
