@@ -49,10 +49,21 @@ if (commandName === "help") {
   }
 
   if (commandName === "idea") {
-    return interaction.reply(
-      "Share your idea in the research channels and the team can review it."
-    );
+  const idea = interaction.options.getString("idea");
+  const channel = interaction.guild.channels.cache.find(
+    ch => ch.name === "ideas-submissions"
+  );
+
+  if (!channel) {
+    return interaction.reply("I could not find the ideas-submissions channel.");
   }
+
+  await channel.send(
+    `💡 New Idea Submission\n\nSubmitted by: ${interaction.user.username}\n\nIdea:\n${idea}\n\nStatus: Pending Review`
+  );
+
+  return interaction.reply("Idea submitted successfully.");
+}
 
   if (commandName === "ask") {
   await interaction.deferReply();
