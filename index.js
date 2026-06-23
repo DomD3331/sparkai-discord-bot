@@ -190,7 +190,7 @@ if (message.channel.name === "research-active" && reaction.emoji.name === "✅")
 );
   }
 }
-});
+});    
 client.login(process.env.DISCORD_BOT_TOKEN);
 
 
