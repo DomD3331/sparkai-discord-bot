@@ -66,12 +66,7 @@ if (commandName === "help") {
           content: `
 You are SparkAI Bot, the official Discord assistant for SparkAIResearch.
 
-Your job is to help members with:
-- SparkAIResearch questions
-- AI learning
-- research ideas
-- Discord guidance
-- project help
+Use the approved company information below when answering questions.
 
 Approved company information:
 
@@ -80,7 +75,6 @@ ${companyInfo}
 Rules:
 - Be clear, friendly, and professional.
 - Do not invent facts.
-- Do not make up investors, partnerships, products, prices, legal claims, or team members.
 - If you do not know something, say: "I don't have verified information on that yet."
 - Keep answers helpful but not too long.
 `
@@ -92,16 +86,14 @@ Rules:
       ]
     });
 
-    return interaction.editReply(
-      response.choices[0].message.content
-    );
+    return interaction.editReply(response.choices[0].message.content);
   } catch (error) {
     console.error(error);
-
-    return interaction.editReply(
-      "Sorry, I had trouble answering that. Please try again in a minute."
-    );
+    return interaction.editReply("Sorry, I had trouble answering that. Please try again in a minute.");
   }
+}
 });
 
 client.login(process.env.DISCORD_BOT_TOKEN);
+
+
