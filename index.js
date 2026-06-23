@@ -181,7 +181,41 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
       );
     }
   }
+if (message.channel.name === "research-queue" && reaction.emoji.name === "🔴") {
+  const criticalChannel = message.guild.channels.cache.find(
+    ch => ch.name === "research-critical"
+  );
 
+  if (criticalChannel) {
+    await criticalChannel.send(
+      `🔴 Critical Research\n\nAssigned Priority: Critical\n\n${message.content}`
+    );
+  }
+}
+
+if (message.channel.name === "research-queue" && reaction.emoji.name === "🟡") {
+  const mediumChannel = message.guild.channels.cache.find(
+    ch => ch.name === "research-medium"
+  );
+
+  if (mediumChannel) {
+    await mediumChannel.send(
+      `🟡 Medium Priority Research\n\nAssigned Priority: Medium\n\n${message.content}`
+    );
+  }
+}
+
+if (message.channel.name === "research-queue" && reaction.emoji.name === "🟢") {
+  const lowChannel = message.guild.channels.cache.find(
+    ch => ch.name === "research-low"
+  );
+
+  if (lowChannel) {
+    await lowChannel.send(
+      `🟢 Low Priority Research\n\nAssigned Priority: Low\n\n${message.content}`
+    );
+  }
+}
   if (message.channel.name === "research-active" && reaction.emoji.name === "✅") {
     const researchComplete = message.guild.channels.cache.find(
       ch => ch.name === "research-complete"
