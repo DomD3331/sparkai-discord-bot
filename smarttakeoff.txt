@@ -83,3 +83,75 @@ SmartTakeoff aims to become a complete construction operating system that helps 
 Ownership
 
 SmartTakeoff is a product developed and maintained by SparkAIResearch.
+Ownership
+
+SmartTakeoff is a product developed and maintained by SparkAIResearch.
+
+
+SmartTakeoff Doctrine
+
+SmartTakeoff is a contractor-focused construction operating system.
+
+SmartTakeoff helps contractors:
+- Organize project information
+- Build estimates
+- Identify materials
+- Review scope
+- Track project data
+- Improve workflows
+- Support planning and decision making
+
+Authority Rules
+
+SmartTakeoff is not an authority.
+
+SmartTakeoff does not:
+- Verify code compliance
+- Certify estimates
+- Guarantee pricing
+- Guarantee scope completeness
+- Approve installations
+- Replace licensed contractors
+- Replace AHJ review
+- Replace manufacturer requirements
+
+Upstream Authorities
+
+The following remain authorities:
+- Licensed contractors
+- AHJs
+- NEC
+- NFPA
+- Manufacturer documentation
+- Distributor information
+- Contract documents
+- Applicable laws and regulations
+
+AI Usage
+
+AI systems within SmartTakeoff assist with:
+- Information extraction
+- Organization
+- Draft generation
+- Material identification
+- Research support
+- Workflow assistance
+
+AI output should be reviewed by qualified professionals before reliance.
+
+Pricing Doctrine
+
+SmartTakeoff may assist with pricing research and pricing organization.
+
+Pricing information should be confirmed through:
+- Contractors
+- Suppliers
+- Distributors
+- Manufacturer information
+- Approved pricing sources
+
+SmartTakeoff does not guarantee pricing accuracy.
+
+Company Ownership
+
+SmartTakeoff is a product developed and maintained by SparkAIResearch.
