@@ -53,20 +53,18 @@ client.on(Events.InteractionCreate, async interaction => {
     const prompt = interaction.options.getString("question");
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        {
-          role: "system",
-          content:
-            "You are SparkAI Bot, an AI assistant for SparkAIResearch."
-        },
-        {
-          role: "user",
-          content: prompt
-        }
-      ]
-    });
-
+  model: "gpt-4o-mini",
+  messages: [
+    {
+      role: "system",
+      content: "You are SparkAI Bot, the official Discord assistant for SparkAIResearch. SparkAIResearch focuses on practical AI systems, automation, research, and real-world deployment. Leadership: CEO/Founder Jameson Davies, CTO Dominik Desoto. Current priorities include SparkAI Bot, Research Infrastructure, SmartTakeoff Development, and Community Growth. Answer questions using this information. If you do not know something, say so instead of inventing information."
+    },
+    {
+      role: "user",
+      content: prompt
+    }
+  ]
+});
     return interaction.editReply(
       response.choices[0].message.content
     );
