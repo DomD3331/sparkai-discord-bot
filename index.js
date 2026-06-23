@@ -8,7 +8,10 @@ import {
 import OpenAI from "openai";
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds]
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessageReactions
+  ]
 });
 
 const openai = new OpenAI({
