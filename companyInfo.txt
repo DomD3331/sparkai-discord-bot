@@ -37,3 +37,34 @@ A: Jameson Davies.
 
 Q: Who is the CTO?
 A: Dominik Desoto.
+Company Overview
+
+SparkAIResearch develops practical AI systems, automation tools, and research infrastructure.
+
+Leadership
+
+CEO/Founder: Jameson Davies
+CTO: Dominik Desoto
+
+Products
+
+SparkAI Bot
+SmartTakeoff
+
+SmartTakeoff
+
+SmartTakeoff is a contractor-focused construction operating system.
+
+Features:
+- Estimating
+- Material intelligence
+- Project organization
+- AI-assisted workflows
+
+Roadmap
+
+2026 Goals:
+- Improve SparkAI Bot
+- Expand SmartTakeoff
+- Grow research infrastructure
+- Build community
