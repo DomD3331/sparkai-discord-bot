@@ -118,8 +118,13 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
   if (user.bot) return;
 
   const message = reaction.message;
-  if (message.channel.name !== "ideas-submissions") return;
+  const allowedChannels = [
+  "ideas-submissions",
+  "research-queue",
+  "research-active"
+];
 
+if (!allowedChannels.includes(message.channel.name)) return;
   const approvedChannel = message.guild.channels.cache.find(
     ch => ch.name === "approved-ideas"
   );
