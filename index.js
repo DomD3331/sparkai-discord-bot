@@ -118,13 +118,15 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
   if (user.bot) return;
 
   const message = reaction.message;
-  const allowedChannels = [
-  "ideas-submissions",
-  "research-queue",
-  "research-active"
-];
 
-if (!allowedChannels.includes(message.channel.name)) return;
+  const allowedChannels = [
+    "ideas-submissions",
+    "research-queue",
+    "research-active"
+  ];
+
+  if (!allowedChannels.includes(message.channel.name)) return;
+
   const approvedChannel = message.guild.channels.cache.find(
     ch => ch.name === "approved-ideas"
   );
@@ -134,63 +136,63 @@ if (!allowedChannels.includes(message.channel.name)) return;
   );
 
   if (
-  message.channel.name === "ideas-submissions" &&
-  reaction.emoji.name === "✅" &&
-  approvedChannel
-) {
-
+    message.channel.name === "ideas-submissions" &&
+    reaction.emoji.name === "✅" &&
+    approvedChannel
+  ) {
     await approvedChannel.send(
-        `✅ Approved Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
+      `✅ Approved Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
     );
 
     const researchQueue = message.guild.channels.cache.find(
-        ch => ch.name === "research-queue"
+      ch => ch.name === "research-queue"
     );
 
-   if (researchQueue) {
-  const queueMessage = await researchQueue.send(
-    `🧠 Research Queue Item\n\nApproved by: ${user.username}\n\n${message.content}`
-  );
+    if (researchQueue) {
+      const queueMessage = await researchQueue.send(
+        `🧠 Research Queue Item\n\nApproved by: ${user.username}\n\n${message.content}`
+      );
 
-  await queueMessage.react("🔴");
-  await queueMessage.react("🟡");
-  await queueMessage.react("🟢");
-  await queueMessage.react("🔬");
-}
+      await queueMessage.react("🔴");
+      await queueMessage.react("🟡");
+      await queueMessage.react("🟢");
+      await queueMessage.react("🔬");
+    }
+  }
 
- if (
-  message.channel.name === "ideas-submissions" &&
-  reaction.emoji.name === "❌" &&
-  rejectedChannel
-) {
+  if (
+    message.channel.name === "ideas-submissions" &&
+    reaction.emoji.name === "❌" &&
+    rejectedChannel
+  ) {
     await rejectedChannel.send(
       `❌ Rejected Idea\n\nReviewed by: ${user.username}\n\nOriginal submission:\n${message.content}`
     );
   }
+
   if (message.channel.name === "research-queue" && reaction.emoji.name === "🔬") {
-  const researchActive = message.guild.channels.cache.find(
-    ch => ch.name === "research-active"
-  );
+    const researchActive = message.guild.channels.cache.find(
+      ch => ch.name === "research-active"
+    );
 
-  if (researchActive) {
-    await researchActive.send(
-  `🔬 Active Research\n\nAssigned To: ${user.username}\n\nStarted: ${new Date().toLocaleDateString()}\n\nStatus: In Progress\n\n${message.content}`
-);
+    if (researchActive) {
+      await researchActive.send(
+        `🔬 Active Research\n\nAssigned To: ${user.username}\n\nStarted: ${new Date().toLocaleDateString()}\n\nStatus: In Progress\n\n${message.content}`
+      );
+    }
   }
-}
 
-if (message.channel.name === "research-active" && reaction.emoji.name === "✅") {
-  const researchComplete = message.guild.channels.cache.find(
-    ch => ch.name === "research-complete"
-  );
+  if (message.channel.name === "research-active" && reaction.emoji.name === "✅") {
+    const researchComplete = message.guild.channels.cache.find(
+      ch => ch.name === "research-complete"
+    );
 
-  if (researchComplete) {
-    await researchComplete.send(
-  `✅ Research Complete\n\nCompleted By: ${user.username}\n\nCompleted: ${new Date().toLocaleDateString()}\n\n${message.content}`
-);
+    if (researchComplete) {
+      await researchComplete.send(
+        `✅ Research Complete\n\nCompleted By: ${user.username}\n\nCompleted: ${new Date().toLocaleDateString()}\n\n${message.content}`
+      );
+    }
   }
-}
-});    
+});
+
 client.login(process.env.DISCORD_BOT_TOKEN);
-
-
