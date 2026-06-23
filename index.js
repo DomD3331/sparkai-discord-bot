@@ -16,6 +16,7 @@ const openai = new OpenAI({
 });
 const companyInfo = fs.readFileSync("companyInfo.txt", "utf8");
 const smartTakeoffInfo = fs.readFileSync("smarttakeoff.txt", "utf8");
+const sparkAIInfo = fs.readFileSync("sparkairesearch.txt", "utf8");
 client.once(Events.ClientReady, () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
@@ -75,6 +76,9 @@ ${companyInfo}
 SmartTakeoff information:
 
 ${smartTakeoffInfo}
+SparkAIResearch information:
+
+${sparkAIInfo}
 Rules:
 - Be clear, friendly, and professional.
 - Do not invent facts.
