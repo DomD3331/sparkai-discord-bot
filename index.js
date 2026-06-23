@@ -147,11 +147,15 @@ if (!allowedChannels.includes(message.channel.name)) return;
         ch => ch.name === "research-queue"
     );
 
-    if (researchQueue) {
-        await researchQueue.send(
-            `🧠 Research Queue Item\n\nApproved by: ${user.username}\n\n${message.content}`
-        );
-    }
+   if (researchQueue) {
+  const queueMessage = await researchQueue.send(
+    `🧠 Research Queue Item\n\nApproved by: ${user.username}\n\n${message.content}`
+  );
+
+  await queueMessage.react("🔴");
+  await queueMessage.react("🟡");
+  await queueMessage.react("🟢");
+  await queueMessage.react("🔬");
 }
 
  if (
