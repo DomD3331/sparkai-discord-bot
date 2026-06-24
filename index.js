@@ -151,6 +151,12 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
   if (user.bot) return;
 
   const message = reaction.message;
+  console.log(
+  "REACTION:",
+  reaction.emoji.name,
+  "CHANNEL:",
+  message.channel.name
+);
 
   const allowedChannels = [
   "ideas-submissions",
