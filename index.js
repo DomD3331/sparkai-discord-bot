@@ -67,6 +67,34 @@ if (commandName === "help") {
 
   return interaction.reply("Idea submitted successfully.");
 }
+  if (commandName === "bug") {
+  const issue = interaction.options.getString("issue");
+
+  const bugChannel = interaction.guild.channels.cache.find(
+    ch => ch.name === "bug-reports"
+  );
+
+  if (!bugChannel) {
+    return interaction.reply("I could not find the bug-reports channel.");
+  }
+
+  const bugMessage = await bugChannel.send(
+    `🐞 Bug Report
+
+Reported by: ${interaction.user.username}
+
+Issue:
+${issue}
+
+Status: Open`
+  );
+
+  await bugMessage.react("🛠️");
+  await bugMessage.react("✅");
+  await bugMessage.react("❌");
+
+  return interaction.reply("Bug report submitted successfully.");
+}
 
   if (commandName === "ask") {
   await interaction.deferReply();
@@ -238,6 +266,33 @@ if (message.channel.name === "research-queue" && reaction.emoji.name === "🟢")
       );
     }
   }
-});
+
+if (message.channel.name === "bug-reports" && reaction.emoji.name === "🛠️") {
+  const bugActive = message.guild.channels.cache.find(
+    ch => ch.name === "bug-active"
+  );
+
+  if (bugActive) {
+    await bugActive.send(
+      `🛠️ Active Bug\n\nAssigned To: ${user.username}\n\n${message.content}`
+    );
+  }
+}
+
+if (
+  ["bug-reports", "bug-active"].includes(message.channel.name) &&
+  reaction.emoji.name === "✅"
+) {
+  const bugFixed = message.guild.channels.cache.find(
+    ch => ch.name === "bug-fixed"
+  );
+
+  if (bugFixed) {
+    await bugFixed.send(
+      `✅ Bug Fixed\n\nFixed By: ${user.username}\n\n${message.content}`
+    );
+  }
+}
+  });
 
 client.login(process.env.DISCORD_BOT_TOKEN);
