@@ -164,7 +164,10 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
   "research-active",
   "research-critical",
   "research-medium",
-  "research-low"
+  "research-low",
+  "bug-reports",
+  "bug-active",
+  "bug-fixed"
 ];
 
   if (!allowedChannels.includes(message.channel.name)) return;
