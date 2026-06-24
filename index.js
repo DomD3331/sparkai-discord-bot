@@ -291,7 +291,7 @@ if (message.channel.name === "bug-reports" && reaction.emoji.name === "🛠️")
 
  if (bugActive) {
   await bugActive.send(
-    `🛠️ Active Bug\n\nAssigned To: ${user.username}\n\n${message.content.replace(
+    `🛠️ Active Bug\n\nAssigned To: ${user.username}\n\nStarted: ${new Date().toLocaleDateString()}\n\n${message.content.replace(
       "Status: Open",
       "Status: In Progress"
     )}`
@@ -309,7 +309,7 @@ if (
 
 if (bugFixed) {
   await bugFixed.send(
-    `✅ Bug Fixed\n\nFixed By: ${user.username}\n\n${message.content
+    `✅ Bug Fixed\n\nFixed By: ${user.username}\n\nCompleted: ${new Date().toLocaleDateString()}\n\n${message.content
       .replace("Status: Open", "Status: Closed")
       .replace("Status: In Progress", "Status: Closed")}`
   );
