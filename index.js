@@ -281,11 +281,14 @@ if (message.channel.name === "bug-reports" && reaction.emoji.name === "🛠️")
     ch => ch.name === "bug-active"
   );
 
-  if (bugActive) {
-    await bugActive.send(
-      `🛠️ Active Bug\n\nAssigned To: ${user.username}\n\n${message.content}`
-    );
-  }
+ if (bugActive) {
+  await bugActive.send(
+    `🛠️ Active Bug\n\nAssigned To: ${user.username}\n\n${message.content.replace(
+      "Status: Open",
+      "Status: In Progress"
+    )}`
+  );
+}
 }
 
 if (
@@ -296,11 +299,13 @@ if (
     ch => ch.name === "bug-fixed"
   );
 
-  if (bugFixed) {
-    await bugFixed.send(
-      `✅ Bug Fixed\n\nFixed By: ${user.username}\n\n${message.content}`
-    );
-  }
+if (bugFixed) {
+  await bugFixed.send(
+    `✅ Bug Fixed\n\nFixed By: ${user.username}\n\n${message.content
+      .replace("Status: Open", "Status: Closed")
+      .replace("Status: In Progress", "Status: Closed")}`
+  );
+}
 }
   });
 
