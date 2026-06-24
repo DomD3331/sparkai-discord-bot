@@ -271,8 +271,16 @@ if (message.channel.name === "research-queue" && reaction.emoji.name === "🟢")
 
     if (researchComplete) {
       await researchComplete.send(
-        `✅ Research Complete\n\nCompleted By: ${user.username}\n\nCompleted: ${new Date().toLocaleDateString()}\n\n${message.content}`
-      );
+  `✅ Research Complete
+
+Completed By: ${user.username}
+
+Completed: ${new Date().toLocaleDateString()}
+
+${message.content
+  .replace("Status: Pending Review", "Status: Closed")
+  .replace("Status: In Progress", "Status: Closed")}`
+);
     }
   }
 
