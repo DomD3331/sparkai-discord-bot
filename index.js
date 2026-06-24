@@ -42,7 +42,7 @@ client.on(Events.InteractionCreate, async interaction => {
   }
 if (commandName === "help") {
   return interaction.reply(
-    "SparkAI Bot Commands:\n\n/about - Learn about SparkAIResearch\n/team - See leadership\n/roadmap - View current focus\n/idea - Share a research idea\n/ask - Ask SparkAI Bot a question\n/help - Show this command list"
+    "SparkAI Bot Commands:\n\n/about - Learn about SparkAIResearch\n/team - See leadership\n/roadmap - View current focus\n/idea - Share a research idea\n/bug - Report a bug\n/ask - Ask SparkAI Bot a question\n/help - Show this command list"
   );
 }
   if (commandName === "roadmap") {
